@@ -1,5 +1,20 @@
-I like music
-I like pork pies
-I like crisps
-I like tea very much
-I like Radio 4
+<<<<<<< HEAD
+I like milk
+=======
+I don't like milk
+>>>>>>> Alex
+I like strawberry
+I like Taeyeon very much
+I like Beakhyun
+I like chocolate biscuits
+I like snow
+I like winter
+<<<<<<< HEAD
+I like banana
+=======
+I like autumn
+I like banana
+I like sandwich
+I like water
+I like Wendy
+>>>>>>> Alex
