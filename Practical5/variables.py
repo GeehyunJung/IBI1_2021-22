@@ -4,3 +4,7 @@ c=271
 d=b-c
 e=a-b
 d>=e
+X=4>6
+Y=5<7
+X and Y
+X or Y
