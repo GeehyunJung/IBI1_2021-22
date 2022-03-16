@@ -8,8 +8,8 @@ if d>e:
 else:
 	print('e is larger and the rate of new cases in 2021 is greater.')
 #answer:e is larger and the rate of new  cases in 2021 is greater
-X=4>6
-Y=5<7
+X='True'
+Y='False'
 W=X  and Y
 print (W)
 W=X or Y
