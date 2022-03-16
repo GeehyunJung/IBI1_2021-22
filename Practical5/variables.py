@@ -12,3 +12,5 @@ X=4>6
 Y=5<7
 W=X  and Y
 print (W)
+W=X or Y
+print (W)
