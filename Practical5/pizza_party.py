@@ -4,6 +4,7 @@ n=2
 a=1
 print(str(n)+' slices of pizza can be cut with '+str(a)+' straight cut.')
 # if n does not equals to 64 than increase the nuber of straight cuts
+# calculate the total number of the slices with the fomular given
 while n!=64:
 	a=a+1
 	n=(a**2+a+2)/2
