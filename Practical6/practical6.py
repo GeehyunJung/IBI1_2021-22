@@ -5,6 +5,7 @@ import numpy as np
 x=np.array(paternal_age)
 y=np.array(chd)
 
+# got the code from the matplotlib website
 # fit a linear curve an estimate its y-values and their error.
 a, b = np.polyfit(x, y, deg=1)
 y_est = a * x + b
@@ -16,3 +17,9 @@ ax.fill_between(x, y_est - y_err, y_est + y_err, alpha=0.2)
 ax.plot(x, y, 'o', color='tab:brown')
 plt.show()
 
+# scatter plot
+plt.plot(x,y,'ro')
+plt.xlabel('paternal_age')
+plt.ylabel('chd')
+plt.title('the realtionship between the age of parent and chd')
+plt.show()
