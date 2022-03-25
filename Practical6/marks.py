@@ -1,4 +1,5 @@
 marks=[45,36,86,57,53,92,65,45]
+# mark are printed from low to high
 print(sorted(marks))
 #codes from matplot.org about how to create a boxplot
 import numpy as np
