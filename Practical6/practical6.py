@@ -4,6 +4,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 x=np.array(paternal_age)
 y=np.array(chd)
+l1={30:1.03,35:1.07,40:1.11,45:1.17,50:1.23,55:1.32,60:1.42,65:1.55,70:1.72,75:1.94}
+# choose a number from paternal age randomly to simulate the user's input
+# when user has an input, print the rate 
+import random
+input=random.choice(paternal_age)
+print('The risk of congenital heart heart disease in the offspring of a father of a given age from the input is '+str(l1[input]))
 
 # got the code from the matplotlib website
 # fit a linear curve an estimate its y-values and their error.
