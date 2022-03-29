@@ -19,7 +19,7 @@ cases_and_deaths = [(covid_china['new_cases']),(covid_china['new_deaths'])]
 
 # boxplot
 fig, ax = plt.subplots()
-VP = ax.boxplot(D, positions=[1,2], widths=0.5, patch_artist=True,
+VP = ax.boxplot(cases_and_deaths, positions=[1,2], widths=0.5, patch_artist=True,
                 showmeans=False, showfliers=False,
                 medianprops={"color": "white", "linewidth": 0.5},
                 boxprops={"facecolor": "C0", "edgecolor": "white",
@@ -31,6 +31,9 @@ VP = ax.boxplot(D, positions=[1,2], widths=0.5, patch_artist=True,
 plt.show()
 
 #plot2
+dates=list(covid_china['date'])
+new_cases=list(covid_china['new_cases'])
+new_deaths=list(covid_china['new_deaths'])
 x=(dates)
 y1=(new_cases)
 y2=(new_deaths)
