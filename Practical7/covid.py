@@ -38,4 +38,19 @@ plt.plot(x,y2)
 plt.plot(x,y1,color='red',linewidth=1,linestyle='--')
 plt.show()
 
-
+#question
+c2=[True,True,True,False,False,False]
+covid314=covid_data.loc[(covid_data['date']=='2020-03-14'),c2]
+cases314=list(covid314['new_cases'])
+plt.title('cases in 3.14 with outliers',fontsize=20)
+plt.boxplot(cases314, notch=True,  vert=False, whis=None, 
+                          widths=None, patch_artist=True, 
+                          conf_intervals=None, meanline=True, showmeans=True, showcaps=None, showbox=None,
+                          showfliers=True,  manage_ticks=True, autorange=False)
+plt.show()
+plt.boxplot(cases314, notch=True,  vert=False, whis=None, positions=None, 
+                          widths=None, patch_artist=True, usermedians=None, 
+                          conf_intervals=None, meanline=None, showmeans=None, showcaps=None, showbox=None,
+                          showfliers=False,  manage_ticks=True, autorange=False)
+plt.title('cases in 3.14 without outliers',fontsize=20)
+plt.show()
