@@ -1,2 +1,2 @@
-qustion:
+question: plot a boxplot of total case numbers in different countries on 14 March 2020
 
