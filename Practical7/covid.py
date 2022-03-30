@@ -17,10 +17,13 @@ column1=[True,False,True,True,False,False]
 covid_china=covid_data.loc[(covid_data['location']=='China'),column1]
 print(covid_china)
 new_deaths=list(covid_china['new_deaths'])
+new_cases=list(covid_china['new_cases'])
+print(np.mean(new_cases))
 print(np.mean(new_deaths))
 
 
-# boxplot
+
+#boxplot1
 cases_and_deaths = [(covid_china['new_cases']),(covid_china['new_deaths'])]
 plt.title('boxplots of new cases and new deaths in china',fontsize=15)
 plt.boxplot(cases_and_deaths, positions=[1,2], widths=0.5, patch_artist=True,
@@ -41,6 +44,7 @@ y1=(new_cases)
 y2=(new_deaths)
 plt.plot(x,y2)
 plt.plot(x,y1,color='plum',linewidth=1,linestyle='--')
+plt.xticks(covid_china['date'].iloc[0:len(covid_china['date']):4],rotation=-90,fontsize=5)
 plt.show()
 
 #question
