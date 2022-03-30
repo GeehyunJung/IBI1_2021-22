@@ -22,14 +22,13 @@ print(np.mean(new_deaths))
 
 # boxplot
 cases_and_deaths = [(covid_china['new_cases']),(covid_china['new_deaths'])]
-fig, ax = plt.subplots()
 plt.title('boxplots of new cases and new deaths in china',fontsize=15)
-VP = ax.boxplot(cases_and_deaths, positions=[1,2], widths=0.5, patch_artist=True,
-                showmeans=False, showfliers=False,
+plt.boxplot(cases_and_deaths, positions=[1,2], widths=0.5, patch_artist=True,
+                showmeans=False, showfliers=False,labels=('new cases','new deaths'),
                 medianprops={"color": "white", "linewidth": 0.5},
-                boxprops={"facecolor": "C0", "edgecolor": "white"},
-                whiskerprops={"color": "C0", "linewidth": 0.5},
-                capprops={"color": "C0", "linewidth": 0.5})
+                boxprops={"facecolor": "lightpink", "edgecolor": "white"},
+                whiskerprops={"color": "hotpink", "linewidth": 0.5},
+                capprops={"color": "hotpink", "linewidth": 0.5})
 plt.show()
 
 #plot2
@@ -41,7 +40,7 @@ x=(dates)
 y1=(new_cases)
 y2=(new_deaths)
 plt.plot(x,y2)
-plt.plot(x,y1,color='red',linewidth=1,linestyle='--')
+plt.plot(x,y1,color='plum',linewidth=1,linestyle='--')
 plt.show()
 
 #question
@@ -59,6 +58,10 @@ plt.show()
 plt.boxplot(cases314, notch=True,  vert=False, whis=None, positions=None, 
                           widths=None, patch_artist=True, usermedians=None, 
                           conf_intervals=None, meanline=None, showmeans=None, showcaps=None, showbox=None,
-                          showfliers=False,  manage_ticks=True, autorange=False)
+                          showfliers=False,  manage_ticks=True, autorange=False,
+            medianprops={"color": "white", "linewidth": 0.5},
+            boxprops={"facecolor": "lightblue", "edgecolor": "white"},
+            whiskerprops={"color": "lightskyblue", "linewidth": 0.5},
+            capprops={"color": "lightskyblue", "linewidth": 0.5})
 plt.title('cases in 3.14 without outliers',fontsize=20)
 plt.show()
