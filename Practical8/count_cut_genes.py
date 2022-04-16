@@ -6,10 +6,12 @@ gene=[]
 current_gene=''
 gene_number=0
 gene_name=[]
+# make one DNA sequence in one line
 for line in sequence:
     line=line.replace('\n','')
     if line.startswith('>'):
         for i in range(len(line)):
+            # store all the names of the gene in gene_name
             if line[i:i+5]=='gene:':
                 pos=i+6
                 name=''
@@ -18,14 +20,17 @@ for line in sequence:
                     pos+=1
                 gene_name.append(name)
         gene_number+=1
+        # add all the genes( one gene in one line) in gene
         gene.append(current_gene)
         current_gene=''
         continue
     current_gene+=line
 gene.append(current_gene)
+#let the user input the filename
 print('Please input the file name here:')
 filename=sys.stdin.readline()
 newfile=open(filename+'.fa','w')
+# choose the genes which have GAATTC and write it in the new file
 for i in range(gene_number):
     current_gene = gene[i]
     gene_length = len(current_gene)
