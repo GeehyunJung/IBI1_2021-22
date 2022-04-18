@@ -36,6 +36,7 @@ for i in range(gene_number):
     gene_length = len(current_gene)
     for p in range(gene_length):
         if current_gene[p:p + 6] == 'GAATTC':
-            newfile.write(gene_name[i]+' '+str(gene_length)+'\n'+current_gene+'\n')
+            fragments=current_gene.find('GAATTC')
+            newfile.write(gene_name[i]+' '+str(fragments+1)+'\n'+current_gene+'\n')
             break
 newfile.close()
