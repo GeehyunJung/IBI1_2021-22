@@ -30,12 +30,12 @@ class Percentage():
         return percentage
     def score(self):
         score=0
-        first_line = list(BLOSUM.head())
+        first_line = list(BLOSUM['First'])
         for i in range(len(seqa)):
             current_score=''
             for k in range(len(first_line)):
                 if first_line[k] == self.second[i]:
-                    number=k-1
+                    number=k
             list1=list(BLOSUM[self.first[i]])
             current_score=list1[number]
             score+=current_score
