@@ -13,6 +13,7 @@ def sequence(x):
         if line.startswith('>'):
             continue
         seq.append(line)
+        print(seq)
     return seq
 seqa=''.join(sequence(a))
 seqb=''.join(sequence(b))
