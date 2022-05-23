@@ -1,4 +1,4 @@
 question: plot a boxplot of total case numbers in different countries on 14 March 2020
 
-line50-line72 are the codes for this question.
+line50-line71 are the codes for this question.
 
