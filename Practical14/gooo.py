@@ -7,41 +7,41 @@ root = tree.documentElement
 term_list=root.getElementsByTagName("term")
 print('The total number of terms is',len(term_list))
 
-dic={}
+a={}
 for term in term_list:
     is_a_list=[]
     for i in term.getElementsByTagName('is_a'):
         is_a_list.append(i.childNodes[0].data)
     id_list= term.getElementsByTagName('id')[0].childNodes[0].data
     for is_a in is_a_list:
-        if is_a in dic:
-            dic[is_a].append(id_list)
+        if is_a in a:
+            a[is_a].append(id_list)
         else:
-            dic[is_a]=[id_list]
+            a[is_a]=[id_list]
 
 def counter(list_):
     for i in list_:
         if i not in list0:
             list0.append(i)
-            if i in dic:
-                counter(dic[i])
+            if i in a:
+                counter(a[i])
     return len(list0)
 totallist=[]
 
 for term in term_list:
     childnodes=0
     list0=[]
-    ids=term.getElementsByTagName('id')[0].childNodes[0].data
-    if ids in dic:
-        childnodes=counter(dic[ids])
+    id_list=term.getElementsByTagName('id')[0].childNodes[0].data
+    if id_list in a:
+        childnodes=counter(a[id_list])
     totallist.append(childnodes)
 
 translist=[]
 for term in term_list:
     if 'translation' in term.getElementsByTagName('defstr')[0].childNodes[0].data:
         id_list=term.getElementsByTagName('id')[0].childNodes[0].data
-        if id_list in dic:
-            childnodes=counter(dic[id_list])
+        if id_list in a:
+            childnodes=counter(a[id_list])
         translist.append(childnodes)
 plt.boxplot(totallist,
 labels=['GO'],
@@ -67,4 +67,3 @@ if avg1>avg2:
     print("The translation terms have a smaller number of childnodes than the overall Gene Ontology on average.")
 if avg1<avg2:
     print("The translation terms have a greater number of childnodes than the overall Gene Ontology on average.")
-    
