@@ -24,3 +24,4 @@ for line in xfile:
 if 'GAATTC' in current_gene:
     myfile.write(current_gene)
 myfile.close()
+
