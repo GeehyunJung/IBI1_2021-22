@@ -1,3 +1,7 @@
+#seventh note on 2022.5.18 The practical this week is quite difficult and the code I wrote need a long time rto run. I'm still working on it.
+
+# Sixth note on 2022.4.18 The feedback of the formative assessment was released. The persudocode should be more detailed.
+
 # Fifth note on 2022.3.23 The problem was solved by changing the version of python into python3
 
 # Fourth note on 2022.3.22 I have a problem when using matplot to draw a boxplot, so I sent an email an asked Rob for help
