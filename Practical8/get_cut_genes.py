@@ -20,7 +20,7 @@ for line in xfile:
         current_gene=''
         continue
     current_gene+=line
-# add the last line
+# add the last line because not include in the loop
 if 'GAATTC' in current_gene:
     myfile.write(current_gene)
 myfile.close()
