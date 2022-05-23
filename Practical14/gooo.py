@@ -67,3 +67,4 @@ if avg1>avg2:
     print("The translation terms have a smaller number of childnodes than the overall Gene Ontology on average.")
 if avg1<avg2:
     print("The translation terms have a greater number of childnodes than the overall Gene Ontology on average.")
+    
