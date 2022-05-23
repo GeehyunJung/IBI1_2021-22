@@ -12,7 +12,7 @@ def sequence(x):
     print(''.join(x))
     print('The precentages of A,T,C,G are:',A_percentage,T_percentage,C_percentage,G_percentage)
     return x
-# use the function
+# use the function to get the sequence
 new_sequence=sequence(origin_sequence)
 # example
 b='GTCaCGtccaaattt'
