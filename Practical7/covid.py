@@ -23,7 +23,7 @@ print(np.mean(new_deaths))
 
 
 
-#boxplot1
+#boxplot1 new causes and new deaths in China
 cases_and_deaths = [(covid_china['new_cases']),(covid_china['new_deaths'])]
 plt.title('boxplots of new cases and new deaths in china',fontsize=15)
 plt.boxplot(cases_and_deaths, positions=[1,2], widths=0.5, patch_artist=True,
@@ -34,7 +34,7 @@ plt.boxplot(cases_and_deaths, positions=[1,2], widths=0.5, patch_artist=True,
                 capprops={"color": "hotpink", "linewidth": 0.5})
 plt.show()
 
-#plot2 a plot with new cases and new deaths
+#plot2 a plot with new cases and new deaths in China
 dates=list(covid_china['date'])
 new_cases=list(covid_china['new_cases'])
 new_deaths=list(covid_china['new_deaths'])
