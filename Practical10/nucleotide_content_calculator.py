@@ -10,8 +10,10 @@ def sequence(x):
     C_percentage=x.count('C')/len(x)
     G_percentage=x.count('G')/len(x)
     print(''.join(x))
-    print('The precentages of A,T,C,G are:',A_percentage,T_percentage,C_percentage,G_percentage)
-    return x
+    print('The precentages of A is',A_percentage)
+    print('The precentages of T is',T_percentage)
+    print('The precentages of C is',C_percentage)
+    print('The precentages of G is',G_percentage)
 # use the function to get the sequence
 new_sequence=sequence(origin_sequence)
 # example
