@@ -1,3 +1,5 @@
+#eighth note on 2022.5.24 I rechecked all the practicals and push them on the github. Fianlly finished my assessment!
+
 #seventh note on 2022.5.18 The practical this week is quite difficult and the code I wrote need a long time rto run. I'm still working on it.
 
 # Sixth note on 2022.4.18 The feedback of the formative assessment was released. The persudocode should be more detailed.
