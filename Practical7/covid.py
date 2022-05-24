@@ -48,7 +48,7 @@ plt.xticks(covid_china['date'].iloc[0:len(covid_china['date']):4],rotation=-90,f
 plt.show()
 
 #question
-c2=[True,True,False,False,True,False]
+c2=[True,True,False,False,True,False]# choose the colums including date,location and total cases
 covid314=covid_data.loc[(covid_data['date']=='2020-03-14'),c2] # choose the lines whose date is 2020,3,14
 cases314=list(covid314['total_cases']) # choose the total cases column
 plt.title('cases in 3.14 with outliers',fontsize=20)
