@@ -13,7 +13,7 @@ for line in sequence:
         for i in range(len(line)):
             # store all the names of the gene in gene_name
             if line[i:i+5]=='gene:':
-                pos=i+6
+                pos=i+5
                 name=''
                 while line[pos]!=' ':
                     name+=line[pos]
@@ -26,7 +26,7 @@ for line in sequence:
         continue
     current_gene+=line
 gene.append(current_gene)
-#let the user input the filename
+#let the user input the filename and make sure it is FASTA format
 print('Please input the file name here:')
 filename=sys.stdin.readline()
 newfile=open(filename+'.fa','w')
@@ -37,6 +37,7 @@ for i in range(gene_number):
     for p in range(gene_length):
         if current_gene[p:p + 6] == 'GAATTC':
             fragments=current_gene.find('GAATTC')
-            newfile.write(gene_name[i]+' '+str(fragments+1)+'\n'+current_gene+'\n')
+            newfile.write('>'+gene_name[i]+'\n'+'The number of sequence that can be cut by EcoRI:'+str(fragments+1)+'\n'+current_gene+'\n')
             break
 newfile.close()
+# the example.fa is also uploaded in the folder
