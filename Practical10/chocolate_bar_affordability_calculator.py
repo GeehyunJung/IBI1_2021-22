@@ -6,5 +6,7 @@ class Price():
         returned_money=self.total_money%self.chocolate_price
         number=self.total_money//self.chocolate_price
         print('The customer can buy',number,'chocolates','\n',returned_money,'yuan will be returned')
+# use 150 and 8 as an example
+# this can be changed
 example=Price(150,8)
 Price.returned(example)
