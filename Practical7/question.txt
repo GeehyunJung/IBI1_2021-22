@@ -2,3 +2,6 @@ question: plot a boxplot of total case numbers in different countries on 14 Marc
 
 line50-line71 are the codes for this question.
 
+discussion: the boxplots shown the distribution of total case numbers in different countries
+           from the boxplot with outlier we can see that the variation is very large
+           from the boxplot without outliers we can tell that the mean value is about 50 and in most countries the number is not very large
