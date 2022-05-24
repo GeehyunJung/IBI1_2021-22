@@ -5,10 +5,13 @@ print(sorted(marks))
 import numpy as np
 import matplotlib.pyplot as plt
 plt.boxplot(marks,
+labels=["Rob's marks"],
 vert=True,#vertical or not
 showmeans=True,#show the mean or not
 meanline=True,#show the mean in line or not
 notch = False)
+plt.title("the distribution of marks")
+plt.ylabel('mark')
 plt.show()
 #calculate the mean of the marks
 mean=sum(marks)/len(marks)
