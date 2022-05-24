@@ -13,8 +13,8 @@ location_only=[False,True,False,False,True,False]
 print(covid_data.loc[(covid_data['location']=='Afghanistan'),location_only])
 
 #covid china
-column1=[True,False,True,True,False,False]
-covid_china=covid_data.loc[(covid_data['location']=='China'),column1]
+column1=[True,False,True,True,False,False]#choose the coloums contain new deaths and new cases
+covid_china=covid_data.loc[(covid_data['location']=='China'),column1]# choose the lines whose location is china
 print(covid_china)
 new_deaths=list(covid_china['new_deaths'])
 new_cases=list(covid_china['new_cases'])
@@ -34,7 +34,7 @@ plt.boxplot(cases_and_deaths, positions=[1,2], widths=0.5, patch_artist=True,
                 capprops={"color": "hotpink", "linewidth": 0.5})
 plt.show()
 
-#plot2
+#plot2 a plot with new cases and new deaths
 dates=list(covid_china['date'])
 new_cases=list(covid_china['new_cases'])
 new_deaths=list(covid_china['new_deaths'])
@@ -49,8 +49,8 @@ plt.show()
 
 #question
 c2=[True,True,True,False,False,False]
-covid314=covid_data.loc[(covid_data['date']=='2020-03-14'),c2]
-cases314=list(covid314['new_cases'])
+covid314=covid_data.loc[(covid_data['date']=='2020-03-14'),c2] # choose the lines whose date is 2020,3,14
+cases314=list(covid314['new_cases']) # choose the new cases column
 plt.title('cases in 3.14 with outliers',fontsize=20)
 #this is a boxplot with outliers so the box is not easy to recognise
 plt.boxplot(cases314, notch=True,  vert=False, whis=None, 
