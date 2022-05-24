@@ -48,18 +48,18 @@ plt.xticks(covid_china['date'].iloc[0:len(covid_china['date']):4],rotation=-90,f
 plt.show()
 
 #question
-c2=[True,True,True,False,False,False]
+c2=[True,True,False,False,True,False]
 covid314=covid_data.loc[(covid_data['date']=='2020-03-14'),c2] # choose the lines whose date is 2020,3,14
-cases314=list(covid314['new_cases']) # choose the new cases column
+cases314=list(covid314['total_cases']) # choose the total cases column
 plt.title('cases in 3.14 with outliers',fontsize=20)
 #this is a boxplot with outliers so the box is not easy to recognise
-plt.boxplot(cases314, notch=True,  vert=False, whis=None, 
+plt.boxplot(cases314, notch=True,  vert=False, whis=None, labels=['total cases'],
                           widths=None, patch_artist=True, 
                           conf_intervals=None, meanline=True, showmeans=True, showcaps=None, showbox=None,
                           showfliers=True,  manage_ticks=True, autorange=False)
 plt.show()
 #this is a boxplot without outliers. In this way the box can be recognised easily
-plt.boxplot(cases314, notch=True,  vert=False, whis=None, positions=None, 
+plt.boxplot(cases314, notch=True,  vert=False, whis=None, positions=None, labels=['total cases'],
                           widths=None, patch_artist=True, usermedians=None, 
                           conf_intervals=None, meanline=None, showmeans=None, showcaps=None, showbox=None,
                           showfliers=False,  manage_ticks=True, autorange=False,
