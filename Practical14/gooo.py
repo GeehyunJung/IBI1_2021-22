@@ -40,8 +40,8 @@ for term in term_list:
     if id_list in total_dic:
         childnodes=add(total_dic[id_list])
     total_list.append(childnodes)
-    # calculate the total number of childnodes
-    total_number+=childnodes
+#calculate the total number
+total_number=sum(total_list)
 # use the function add again with the terms associated with translation
 translation=[]
 for term in term_list:
@@ -51,8 +51,8 @@ for term in term_list:
         if id_list in total_dic:
             childnodes=add(total_dic[id_list])
         translation.append(childnodes)
-        #calculate the total number of childnodes
-        translation_number+=childnodes
+#calculate the total number of childnodes
+translation_number=sum(translation)
 # draw the boxplot
 plt.boxplot(total_list,
 labels=['GO'],
@@ -75,6 +75,7 @@ plt.show()
 #calculate the average number of the total and tranlation terms and compare them with each other
 total=total_number/len(total_list)
 trans=translation_number/len(translation)
+print (total,trans)
 if total>trans:
     print("The translation terms have a smaller number of childnodes than the overall Gene Ontology on average.")
 if total<trans:
